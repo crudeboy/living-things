@@ -1,0 +1,31 @@
+// Colors
+$color-font: #2c2c2c;
+$color-font-pale: #aaa;
+$color-background: #EFF3F6;
+$color-hover-background: #eee;
+$color-active-background: #E1EBF5;
+$color-placeholder: #C2C2C2;
+$color-white: #fff;
+$color-border: rgb(201, 201, 201);
+$color-red: #EB2C32;
+$color-green: #55B341;
+$color-secondary: #202E39;
+
+// Distances
+$distance-default: 2rem;
+$sidebar-width: 16em;
+
+
+// Breakpoints
+
+@mixin maxmd {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin minlg {
+  @media (min-width: 768px) {
+    @content;
+  }
+}

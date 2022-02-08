@@ -1,0 +1,11 @@
+@import '../../../assets/styles/var';
+
+.app {
+  background: $color-background;
+  display: flex;
+  min-height: 100vh;
+
+  &__main {
+    width: calc(100% - $sidebar-width);
+  }
+}

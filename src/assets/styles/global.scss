@@ -1,0 +1,138 @@
+@import './var';
+@import 'bulma/css/bulma.css';
+@import './forms';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  color: $color-font;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.content {
+    flex-grow: 1;
+
+    tr {
+        cursor: pointer;
+
+        .delete-link {
+            color: blue;
+            text-decoration: underline;
+        }
+    }
+}
+
+.form {
+
+
+  &__button-row {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 4rem;
+
+    .button {
+      margin-left: 1rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.activity-indicator {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 5px;
+  bottom: -5px;
+}
+
+.button, .activity-indicator {
+  &.busy:after {
+    content: ' ';
+    position: absolute;
+    background: #ff6d00;
+    width: 20px;
+    height: 3px;
+    left:calc(100% - 20px);
+    bottom: 1px;
+    animation: loading 2s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 20px);
+  }
+}
+
+.companies, .tag-list, .news-list {
+
+  .page__header {
+    padding-right: 2rem;
+  }
+
+  .unique-identifier-cell {
+    font-weight: bold;
+  }
+
+  .table td.first-column {
+    padding-left: 2em;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+
+  &.is-striped tbody tr:not(.is-selected):nth-child(2n) {
+    background-color: #e9eef4 !important;
+  }
+
+  thead {
+    background: #dfe8ee!important;
+  }
+
+  th {
+    font-weight: 100;
+    text-transform: uppercase;
+    vertical-align: middle !important;
+  }
+
+  td {
+    white-space: nowrap;
+  }
+}
+
+.textarea-status {
+  margin-bottom: 1rem;
+  background: $color-secondary;
+  color:#dfe8ee;
+  padding: 0.2rem 1rem;
+  font-size: 0.7rem;
+}

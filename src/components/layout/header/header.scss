@@ -1,0 +1,23 @@
+@import '../../../assets/styles/var';
+
+.header {
+  padding: 1rem 0;
+
+  &__container {
+    display: flex;
+  }
+
+  &__create-button {
+    margin-left: auto;
+  }
+
+  &__menu-link {
+    cursor: pointer;
+    padding: .5rem 1.8rem;
+    transition: background .4s;
+
+    &:hover {
+      background: $color-hover-background;
+    }
+  }
+}

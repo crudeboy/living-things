@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+  gui:
+    build: .
+    image: kehrwasser-business-react-mvp:unstable
+    ports:
+      - "7070:7070"
+    volumes:
+      - ./build:/home/nonroot/htdocs
+

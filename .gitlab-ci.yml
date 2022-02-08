@@ -1,0 +1,19 @@
+
+stages:
+    - build
+    - publish
+    - test
+    - deploy
+
+react:
+    stage: build
+    image: node:16.13.2-alpine3.15
+    script:
+        - npm ci
+        - DISABLE_ESLINT_PLUGIN=true npm run build
+    artifacts:
+        expire_in: 1 day
+        paths:
+            - node_modules/
+            - build/
+            - package-lock.json

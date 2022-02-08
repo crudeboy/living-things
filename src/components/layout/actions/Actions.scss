@@ -1,0 +1,11 @@
+@import '../../../assets/styles/var';
+
+.actions {
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+    padding: 1em $distance-default;
+
+    .input-field {
+        margin-bottom: unset;
+    }
+}

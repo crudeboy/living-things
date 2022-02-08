@@ -1,0 +1,45 @@
+@import '../../../assets/styles/var';
+
+.page {
+
+  &__header {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: $distance-default;
+  }
+
+  &__content {
+    margin: $distance-default;
+  }
+
+  &.list &__content {
+    margin: 0;
+  }
+
+  &__heading {
+    margin: .5rem 0;
+  }
+
+  &__create-button {
+    margin: .5rem 0;
+  }
+
+  .actions {
+    display: flex;
+
+    .actions-dropdown select {
+        width: unset !important;
+        font-size: 0.8rem !important;
+    }
+
+    .button {
+      font-size: 0.8rem !important;
+      background: $color-secondary;
+      color: #E8EBEE;
+      border-left: 0;
+    }
+  }
+
+}

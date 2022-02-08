@@ -1,0 +1,22 @@
+@import '../../../assets/styles/var';
+
+.sidebar {
+  background: #FBFBFB;
+  border-right: 1px solid $color-border;
+  padding: 2rem;
+  width: calc($sidebar-width - 1px);
+
+  &__header {
+    //
+  }
+
+  &__company-name {
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    font-size: 0.7em;
+    line-height: 1;
+    color: $color-font-pale;
+  }
+}

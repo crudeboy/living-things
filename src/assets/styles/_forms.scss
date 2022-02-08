@@ -1,0 +1,54 @@
+@import './var';
+
+.button, .input, .textarea, .select select {
+  border-color: $color-border;
+  border-radius: 0;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  padding-top: calc(0.2em - 1px);
+  padding-bottom: calc(0.2em - 1px);
+
+  &.busy:after {
+    content: ' ';
+    position: absolute;
+    background: #ff6d00;
+    width: 20px;
+    height: 3px;
+    left:calc(100% - 20px);
+    bottom: 1px;
+    animation: loading 2s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  }
+}
+
+@keyframes loading {
+  0%,
+  100% {
+    left: 0;
+  }
+
+  50% {
+    left: calc(100% - 20px);
+  }
+}
+
+.validation-error {
+  font-size: .8em;
+  margin-top: 0;
+  color: $color-red;
+  transform: translateY(-10px)
+}
+
+.form {
+  &__button-row {
+    display: flex;
+    align-items: center;
+
+    .validation-error {
+      transform: none;
+      margin: 0 20px!important;
+    }
+  }
+}
